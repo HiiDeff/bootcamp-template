@@ -2,8 +2,9 @@ package org.firstinspires.ftc.teamcode.pixelanalysis;
 
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 
-public class PixelCountDetection {
+public class BarcodeDetection {
 
+    private static final THRESHOLD = 500;
     private static final String TAG = "Webcam";
     private final CameraWrapper camera;
     private final int left, width;
@@ -40,9 +41,9 @@ public class PixelCountDetection {
                     }
                 }
             }
-            if (leftCount > 500 && rightCount > 500) {
+            if (leftCount > THRESHOLD && rightCount > THRESHOLD) {
                 placement = TSEPlacement.NONE;
-            } else if (leftCount > 500) {
+            } else if (leftCount > THRESHOLD) {
                 placement = TSEPlacement.RIGHT;
             } else {
                 placement = TSEPlacement.LEFT;
