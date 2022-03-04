@@ -9,7 +9,7 @@ import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
 
 import java.util.List;
 
-abstract class TensorFlowDuckDetection {
+public class TensorFlowDuckDetection {
 
     private static final String TFOD_MODEL_ASSET = "FreightFrenzy_BCDM.tflite";
     private static final String[] LABELS = {
