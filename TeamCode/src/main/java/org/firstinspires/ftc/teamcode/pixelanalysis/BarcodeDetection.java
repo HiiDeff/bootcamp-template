@@ -4,14 +4,13 @@ import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 
 public class BarcodeDetection {
 
-    private static final THRESHOLD = 500;
-    private static final String TAG = "Webcam";
+    private static final int THRESHOLD = 500;
     private final CameraWrapper camera;
     private final int left, width;
     private boolean debugMode = false;
     private TSEPlacement placement = TSEPlacement.NONE;
 
-    public PixelCountDetection(WebcamName cameraName, int left, int right) {
+    public BarcodeDetection(WebcamName cameraName, int left, int right) {
         this.left = left;
         this.width = right - left + 1;
         camera = new CameraWrapper(cameraName);
@@ -25,7 +24,7 @@ public class BarcodeDetection {
         int top = 120;
         int height = 240;
         ClipBound bound = new ClipBound(left, top, width, height);
-        boolean[][] objectArea = camera.extractObjects(bound, hsv -> ImageProcessor.isBlueOrRed(hsv), debugMode);
+        boolean[][] objectArea = camera.extractObjects(bound, ImageProcessor::isBlueOrRed, debugMode);
         if (objectArea != null) {
             int leftCount = 0;
             int rightCount = 0;
