@@ -19,7 +19,8 @@ public class TensorFlowDuckDetection {
             "Marker"
     };
 
-    private static final String VUFORIA_KEY = "YOUR_VUFORIA_KEY_HERE";
+    private static final String VUFORIA_KEY =
+            "AR7ytLn/////AAABmeatoFDHmEfprFCiMGbb/rVxdarikyMf2F8fzONhI2Em4VL3qh9yBBDiAOS/AFx7oUtdvZpc1d8Z9u59X189Sw8jSRi2mecxb9wZc0eaZf1GmpRql/fGFH+EylZO/0CsHWvhwWWtsaLQJR1w1SIT8kW4FPsPHrt9Z2pGHg7Xf2a30oAtOPE3hJxad5DPiIrLuyBJ7tLtWf0gqTTTVKpDLU9YM83LH2f4M7CFERxMFtdemtzUkuBq0qlJsSmO4kXaLYk1Rs8p+WB2woCYEJeFDM8O4Z6UTtEBclctju1h7PvMsHYpRXi09QT7sDYhBTlRH5DqqNgunzeABpfY1WdT3AmvKMSAIuEBYjGjxcKp4uKW";
 
     private static final double SCREEN_WIDTH = 1280;
 

@@ -8,7 +8,7 @@ public class ImageProcessor {
     }
 
     public static boolean isYellow(HSV hsv) {
-        return hsv.s > 40 && hsv.h > 20 && hsv.h  < 66;
+        return hsv.s > 40 && hsv.h > 20 && hsv.h < 66;
     }
 
     public static HSV RGBToHSV(int color) {
